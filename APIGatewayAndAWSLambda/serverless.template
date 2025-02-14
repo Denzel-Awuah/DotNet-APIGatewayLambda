@@ -1,0 +1,98 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Globals": {
+    "Function": {
+      "Layers": [
+        {
+          "Fn::Sub": "arn:aws:lambda:ca-central-1:580247275435:layer:LambdaInsightsExtension:54"
+        }
+      ]
+    }
+  },
+  "Description": "An AWS Serverless Application. This template is partially managed by Amazon.Lambda.Annotations (v1.6.1.0).",
+  "Resources": {
+    "APIGatewayAndAWSLambdaFunctionsPathParameterHandlerGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ],
+        "SyncedEventProperties": {
+          "RootGet": [
+            "Path",
+            "Method"
+          ]
+        }
+      },
+      "Properties": {
+        "Runtime": "dotnet8",
+        "FunctionName": "APIGatewayAndAWSLambdaFunction_PathParameters",
+        "CodeUri": ".",
+        "MemorySize": 512,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole",
+          "CloudWatchLambdaInsightsExecutionRolePolicy"
+        ],
+        "PackageType": "Zip",
+        "Handler": "APIGatewayAndAWSLambda::APIGatewayAndAWSLambda.Functions_PathParameterHandler_Generated::PathParameterHandler",
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/{name}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "APIGatewayAndAWSLambdaFunctionsQueryParametersHandlerGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ],
+        "SyncedEventProperties": {
+          "RootGet": [
+            "Path",
+            "Method"
+          ]
+        }
+      },
+      "Properties": {
+        "Runtime": "dotnet8",
+        "FunctionName": "APIGatewayAndAWSLambdaFunction_QueryParameters",
+        "CodeUri": ".",
+        "MemorySize": 512,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole",
+          "CloudWatchLambdaInsightsExecutionRolePolicy"
+        ],
+        "PackageType": "Zip",
+        "Handler": "APIGatewayAndAWSLambda::APIGatewayAndAWSLambda.Functions_QueryParametersHandler_Generated::QueryParametersHandler",
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "ApiURL": {
+      "Description": "API endpoint URL for Prod environment",
+      "Value": {
+        "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+      }
+    }
+  }
+}

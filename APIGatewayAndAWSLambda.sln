@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGatewayAndAWSLambda", "APIGatewayAndAWSLambda\APIGatewayAndAWSLambda.csproj", "{1043C38E-9CF7-4667-A0FE-88A304995876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGatewayAndAWSLambda.Tests", "APIGatewayAndAWSLambda.Tests\APIGatewayAndAWSLambda.Tests.csproj", "{D0216878-484B-4758-8DCD-8EC3A58A596B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1043C38E-9CF7-4667-A0FE-88A304995876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1043C38E-9CF7-4667-A0FE-88A304995876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1043C38E-9CF7-4667-A0FE-88A304995876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1043C38E-9CF7-4667-A0FE-88A304995876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0216878-484B-4758-8DCD-8EC3A58A596B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0216878-484B-4758-8DCD-8EC3A58A596B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0216878-484B-4758-8DCD-8EC3A58A596B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0216878-484B-4758-8DCD-8EC3A58A596B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
