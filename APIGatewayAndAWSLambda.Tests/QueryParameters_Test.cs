@@ -15,17 +15,22 @@ public class QueryParameters_Test
     [Fact]
     public async Task TestGetMethod_ReturnData()
     {
+
+        //Arrange
         var context = new TestLambdaContext();
         var functions = new Functions();
 
+        //Act
         APIGatewayProxyRequest request = new APIGatewayProxyRequest()
         {
             HttpMethod = "GET",
             Path = "/",
             Body = "Denzel Awuah"
         };
+
         CustomResponse response = await functions.QueryParametersHandler(request, context);
 
+        //Assert
         Assert.Equal("Test Name", response.data);
         Assert.Equal((int)HttpStatusCode.OK, response.statusCode);
     }
