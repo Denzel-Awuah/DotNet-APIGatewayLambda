@@ -38,9 +38,11 @@ public class QueryParameters_Test
     [Fact]
     public async Task TestGetMethod_QueryStrings()
     {
+        //Arrange
         var context = new TestLambdaContext();
         var functions = new Functions();
 
+        //Act
         Dictionary<string, string> queryParameters = new Dictionary<string, string>();
         queryParameters.Add("name", "Test Name");
 
@@ -52,8 +54,8 @@ public class QueryParameters_Test
             QueryStringParameters = queryParameters
         };
 
+        //Assert
         CustomResponse response = await functions.QueryParametersHandler(request, context);
-
         Assert.Equal("Test Name", response.data);
     }
 }
