@@ -58,10 +58,7 @@ public class Functions
             ? request.PathParameters["name"]
             : "Test Name";
 
-        for(int i = 1; i <= 100000; i++)
-        {
-            Console.WriteLine($"The name route parameter: {name}");
-        }
+        Console.WriteLine($"The name route parameter: {name}");
 
         routeParam = routeParam.Replace("%20", " ");
 
