@@ -72,15 +72,4 @@ public class Functions
     }
 }
 
-public class CustomResponse
-{
-    public string data { get; set; }
-    public int statusCode { get; set; }
-
-    public CustomResponse(string data, int statusCode)
-    {
-        this.data = data;
-        this.statusCode = statusCode;
-    }
-}
 
