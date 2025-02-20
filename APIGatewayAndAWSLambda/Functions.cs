@@ -63,8 +63,8 @@ public class Functions
         routeParam = routeParam.Replace("%20", " ");
 
         CustomResponse response = new CustomResponse(routeParam, 200);
-        Console.WriteLine($"The request data {JsonSerializer.Serialize(request)}");
-        Console.WriteLine($"The response data: {JsonSerializer.Serialize(response)}");
+        Console.WriteLine($"The APIProxyRequest data {JsonSerializer.Serialize(request)}");
+        Console.WriteLine($"The Custom Response data: {JsonSerializer.Serialize(response)}");
 
         return response;
     }
