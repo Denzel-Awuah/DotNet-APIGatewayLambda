@@ -39,6 +39,7 @@ public class Functions
     [RestApi(LambdaHttpMethod.Get, "/")]
     public async Task<CustomResponse> QueryParametersHandler(APIGatewayProxyRequest request, ILambdaContext context)
     {
+        //Stores the "name" Query Parameter as a string
         var name = request.QueryStringParameters != null && request.QueryStringParameters.ContainsKey("name")
             ? request.QueryStringParameters["name"]
             : "Test Name";
@@ -54,6 +55,7 @@ public class Functions
     [RestApi(LambdaHttpMethod.Get, "/{name}")]
     public async Task<CustomResponse> PathParameterHandler(APIGatewayProxyRequest request, String name, ILambdaContext context)
     {
+        //Stores the "name" Path Parameter as a string
         var routeParam = request.PathParameters != null && request.PathParameters.ContainsKey("name")
             ? request.PathParameters["name"]
             : "Test Name";
