@@ -34,7 +34,7 @@ public class Functions
     /// objects directly, see the accompanying Readme.md for instructions.
     /// </remarks>
     /// <param name="context">Information about the invocation, function, and execution environment</param>
-    /// <returns>The response as an implicit <see cref="APIGatewayProxyResponse"/></returns>
+    /// <returns>The response as an implicit <see cref="APIGatewayProxyResponse"/>CustomResponse Model</returns>
     [LambdaFunction]
     [RestApi(LambdaHttpMethod.Get, "/")]
     public async Task<CustomResponse> QueryParametersHandler(APIGatewayProxyRequest request, ILambdaContext context)
@@ -57,7 +57,7 @@ public class Functions
     /// <param name="request">The API Gateway Proxy object</param>
     /// <param name="name">The name in the Path Parameter</param>
     /// <param name="context">The Lambda function context</param>
-    /// <returns>The Custom Response object</returns>
+    /// <returns>The response as an implicit <see cref="APIGatewayProxyResponse"/>CustomResponse Model</returns>
     [LambdaFunction]
     [RestApi(LambdaHttpMethod.Get, "/{name}")]
     public async Task<CustomResponse> PathParameterHandler(APIGatewayProxyRequest request, String name, ILambdaContext context)
