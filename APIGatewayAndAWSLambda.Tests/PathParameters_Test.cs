@@ -11,12 +11,21 @@ using Xunit;
 
 namespace APIGatewayAndAWSLambda.Tests
 {
+    /// <summary>
+    /// Test Class for PathParameters Function
+    /// </summary>
     public class PathParameters_Test
     {
+        /// <summary>
+        /// Constructor to initialize the PathParameters_Test class
+        /// </summary>
         public PathParameters_Test()
         {
         }
 
+        /// <summary>
+        /// Test Method to check if the PathParameterHandler returns the correct response when the "name" Path Parameter is provided
+        /// </summary>
         [Fact]
         public async Task PathParameterHandler_ReturnsCorrectResponse_WhenNameIsProvided()
         {
@@ -36,6 +45,9 @@ namespace APIGatewayAndAWSLambda.Tests
             Assert.Equal(200, response.statusCode);
         }
 
+        /// <summary>
+        /// Test Method to check if the PathParameterHandler returns the default response when the "name" Path Parameter is not provided
+        /// </summary>
         [Fact]
         public async Task PathParameterHandler_ReturnsDefaultResponse_WhenNameIsNotProvided()
         {
