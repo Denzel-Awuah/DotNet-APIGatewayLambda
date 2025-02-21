@@ -51,6 +51,13 @@ public class Functions
         return response;
     }
 
+    /// <summary>
+    /// A Lambda function to respond to HTTP Get methods from API Gateway, with a Path Parameter
+    /// </summary>
+    /// <param name="request">The API Gateway Proxy object</param>
+    /// <param name="name">The name in the Path Parameter</param>
+    /// <param name="context">The Lambda function context</param>
+    /// <returns>The Custom Response object</returns>
     [LambdaFunction]
     [RestApi(LambdaHttpMethod.Get, "/{name}")]
     public async Task<CustomResponse> PathParameterHandler(APIGatewayProxyRequest request, String name, ILambdaContext context)
