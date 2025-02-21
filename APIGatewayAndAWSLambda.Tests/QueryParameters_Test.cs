@@ -8,10 +8,17 @@ namespace APIGatewayAndAWSLambda.Tests;
 
 public class QueryParameters_Test
 {
+    /// <summary>
+    /// Constructor to initialize the QueryParameters_Test class
+    /// </summary>
     public QueryParameters_Test()
     {
     }
 
+    /// <summary>
+    /// Test Method to check if the QueryParametersHandler returns the correct response when the "name" Query Parameter is provided
+    /// </summary>
+    /// <returns></returns>
     [Fact]
     public async Task TestGetMethod_ReturnData()
     {
@@ -35,6 +42,10 @@ public class QueryParameters_Test
         Assert.Equal((int)HttpStatusCode.OK, response.statusCode);
     }
 
+    /// <summary>
+    /// Test Method to check if the QueryParametersHandler returns the correct response when the "name" Query Parameter is provided
+    /// </summary>
+    /// <returns></returns>
     [Fact]
     public async Task TestGetMethod_QueryStrings()
     {
