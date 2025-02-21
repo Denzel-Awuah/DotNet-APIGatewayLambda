@@ -44,7 +44,6 @@ public class QueryParameters_Test
     /// <summary>
     /// Test Method to check if the QueryParametersHandler returns the correct response when the "name" Query Parameter is provided
     /// </summary>
-    /// <returns></returns>
     [Fact]
     public async Task TestGetMethod_QueryStrings()
     {
